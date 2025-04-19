@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		1807FAB72DB3BEF400CAB7A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1807FAA02DB3BEF300CAB7A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1807FAA72DB3BEF300CAB7A1;
+			remoteInfo = "Android Mac Transfer";
+		};
+		1807FAC12DB3BEF500CAB7A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1807FAA02DB3BEF300CAB7A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1807FAA72DB3BEF300CAB7A1;
+			remoteInfo = "Android Mac Transfer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1807FAA82DB3BEF300CAB7A1 /* Android Mac Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Android Mac Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1807FAB62DB3BEF400CAB7A1 /* Android Mac TransferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Android Mac TransferTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1807FAC02DB3BEF500CAB7A1 /* Android Mac TransferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Android Mac TransferUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1807FAAA2DB3BEF300CAB7A1 /* Android Mac Transfer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Android Mac Transfer";
+			sourceTree = "<group>";
+		};
+		1807FAB92DB3BEF400CAB7A1 /* Android Mac TransferTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Android Mac TransferTests";
+			sourceTree = "<group>";
+		};
+		1807FAC32DB3BEF500CAB7A1 /* Android Mac TransferUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Android Mac TransferUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1807FAA52DB3BEF300CAB7A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1807FAB32DB3BEF400CAB7A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1807FABD2DB3BEF500CAB7A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1807FA9F2DB3BEF300CAB7A1 = {
+			isa = PBXGroup;
+			children = (
+				1807FAAA2DB3BEF300CAB7A1 /* Android Mac Transfer */,
+				1807FAB92DB3BEF400CAB7A1 /* Android Mac TransferTests */,
+				1807FAC32DB3BEF500CAB7A1 /* Android Mac TransferUITests */,
+				1807FAA92DB3BEF300CAB7A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1807FAA92DB3BEF300CAB7A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1807FAA82DB3BEF300CAB7A1 /* Android Mac Transfer.app */,
+				1807FAB62DB3BEF400CAB7A1 /* Android Mac TransferTests.xctest */,
+				1807FAC02DB3BEF500CAB7A1 /* Android Mac TransferUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1807FAA72DB3BEF300CAB7A1 /* Android Mac Transfer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1807FACA2DB3BEF500CAB7A1 /* Build configuration list for PBXNativeTarget "Android Mac Transfer" */;
+			buildPhases = (
+				1807FAA42DB3BEF300CAB7A1 /* Sources */,
+				1807FAA52DB3BEF300CAB7A1 /* Frameworks */,
+				1807FAA62DB3BEF300CAB7A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1807FAAA2DB3BEF300CAB7A1 /* Android Mac Transfer */,
+			);
+			name = "Android Mac Transfer";
+			packageProductDependencies = (
+			);
+			productName = "Android Mac Transfer";
+			productReference = 1807FAA82DB3BEF300CAB7A1 /* Android Mac Transfer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1807FAB52DB3BEF400CAB7A1 /* Android Mac TransferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1807FACD2DB3BEF500CAB7A1 /* Build configuration list for PBXNativeTarget "Android Mac TransferTests" */;
+			buildPhases = (
+				1807FAB22DB3BEF400CAB7A1 /* Sources */,
+				1807FAB32DB3BEF400CAB7A1 /* Frameworks */,
+				1807FAB42DB3BEF400CAB7A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1807FAB82DB3BEF400CAB7A1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1807FAB92DB3BEF400CAB7A1 /* Android Mac TransferTests */,
+			);
+			name = "Android Mac TransferTests";
+			packageProductDependencies = (
+			);
+			productName = "Android Mac TransferTests";
+			productReference = 1807FAB62DB3BEF400CAB7A1 /* Android Mac TransferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1807FABF2DB3BEF500CAB7A1 /* Android Mac TransferUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1807FAD02DB3BEF500CAB7A1 /* Build configuration list for PBXNativeTarget "Android Mac TransferUITests" */;
+			buildPhases = (
+				1807FABC2DB3BEF500CAB7A1 /* Sources */,
+				1807FABD2DB3BEF500CAB7A1 /* Frameworks */,
+				1807FABE2DB3BEF500CAB7A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1807FAC22DB3BEF500CAB7A1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1807FAC32DB3BEF500CAB7A1 /* Android Mac TransferUITests */,
+			);
+			name = "Android Mac TransferUITests";
+			packageProductDependencies = (
+			);
+			productName = "Android Mac TransferUITests";
+			productReference = 1807FAC02DB3BEF500CAB7A1 /* Android Mac TransferUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1807FAA02DB3BEF300CAB7A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					1807FAA72DB3BEF300CAB7A1 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					1807FAB52DB3BEF400CAB7A1 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 1807FAA72DB3BEF300CAB7A1;
+					};
+					1807FABF2DB3BEF500CAB7A1 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 1807FAA72DB3BEF300CAB7A1;
+					};
+				};
+			};
+			buildConfigurationList = 1807FAA32DB3BEF300CAB7A1 /* Build configuration list for PBXProject "Android Mac Transfer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1807FA9F2DB3BEF300CAB7A1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1807FAA92DB3BEF300CAB7A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1807FAA72DB3BEF300CAB7A1 /* Android Mac Transfer */,
+				1807FAB52DB3BEF400CAB7A1 /* Android Mac TransferTests */,
+				1807FABF2DB3BEF500CAB7A1 /* Android Mac TransferUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1807FAA62DB3BEF300CAB7A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1807FAB42DB3BEF400CAB7A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1807FABE2DB3BEF500CAB7A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1807FAA42DB3BEF300CAB7A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1807FAB22DB3BEF400CAB7A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1807FABC2DB3BEF500CAB7A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1807FAB82DB3BEF400CAB7A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1807FAA72DB3BEF300CAB7A1 /* Android Mac Transfer */;
+			targetProxy = 1807FAB72DB3BEF400CAB7A1 /* PBXContainerItemProxy */;
+		};
+		1807FAC22DB3BEF500CAB7A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1807FAA72DB3BEF300CAB7A1 /* Android Mac Transfer */;
+			targetProxy = 1807FAC12DB3BEF500CAB7A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1807FAC82DB3BEF500CAB7A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1807FAC92DB3BEF500CAB7A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		1807FACB2DB3BEF500CAB7A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Android Mac Transfer/Android_Mac_Transfer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "space.zettelhuhn.Android-Mac-Transfer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1807FACC2DB3BEF500CAB7A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Android Mac Transfer/Android_Mac_Transfer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "space.zettelhuhn.Android-Mac-Transfer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1807FACE2DB3BEF500CAB7A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "space.zettelhuhn.Android-Mac-TransferTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Android Mac Transfer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Android Mac Transfer";
+			};
+			name = Debug;
+		};
+		1807FACF2DB3BEF500CAB7A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "space.zettelhuhn.Android-Mac-TransferTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Android Mac Transfer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Android Mac Transfer";
+			};
+			name = Release;
+		};
+		1807FAD12DB3BEF500CAB7A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "space.zettelhuhn.Android-Mac-TransferUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Android Mac Transfer";
+			};
+			name = Debug;
+		};
+		1807FAD22DB3BEF500CAB7A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "space.zettelhuhn.Android-Mac-TransferUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Android Mac Transfer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1807FAA32DB3BEF300CAB7A1 /* Build configuration list for PBXProject "Android Mac Transfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807FAC82DB3BEF500CAB7A1 /* Debug */,
+				1807FAC92DB3BEF500CAB7A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1807FACA2DB3BEF500CAB7A1 /* Build configuration list for PBXNativeTarget "Android Mac Transfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807FACB2DB3BEF500CAB7A1 /* Debug */,
+				1807FACC2DB3BEF500CAB7A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1807FACD2DB3BEF500CAB7A1 /* Build configuration list for PBXNativeTarget "Android Mac TransferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807FACE2DB3BEF500CAB7A1 /* Debug */,
+				1807FACF2DB3BEF500CAB7A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1807FAD02DB3BEF500CAB7A1 /* Build configuration list for PBXNativeTarget "Android Mac TransferUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807FAD12DB3BEF500CAB7A1 /* Debug */,
+				1807FAD22DB3BEF500CAB7A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1807FAA02DB3BEF300CAB7A1 /* Project object */;
+}
