@@ -1,39 +1,55 @@
+// 📁 SECTION: Imports & State
 import SwiftUI
 import AppKit
 
+// 🔚 END SECTION: Imports & State
+
 struct ContentView: View {
+    // 📁 SECTION: State Variablen
     @State private var androidPath = "/sdcard"
     @State private var entries: [String] = []
-    @State private var selectedEntry: String? = nil
+    @State private var selectedEntries: Set<String> = []
     @State private var macTargetPath = ""
     @State private var output = ""
+    @State private var progressText = ""
+    @State private var progressValue: Double = 0
+    // 🔚 END SECTION: State Variablen
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
+            // 📂 SECTION: Pfad anzeigen
             Text("📂 Android Pfad: \(androidPath)")
                 .font(.headline)
+            // 🔚 END SECTION: Pfad anzeigen
 
-            List(entries, id: \.self) { entry in
+            // 🗂️ SECTION: Liste der Ordner & Auswahl
+            List(entries, id: \ .self) { entry in
                 HStack {
-                    Text(entry)
-                        .font(.system(.body, design: .monospaced))
+                    Toggle(isOn: Binding(
+                        get: { selectedEntries.contains(entry) },
+                        set: { isSelected in
+                            if isSelected {
+                                selectedEntries.insert(entry)
+                            } else {
+                                selectedEntries.remove(entry)
+                            }
+                        }
+                    )) {
+                        Text(entry)
+                            .font(.system(.body, design: .monospaced))
+                    }
                     Spacer()
                     if entry.hasSuffix("/") {
                         Button("Öffnen") {
                             navigateInto(entry)
                         }
-                        Button("Wählen") {
-                            selectedEntry = entry
-                        }
-                    } else {
-                        Button("Wählen") {
-                            selectedEntry = entry
-                        }
                     }
                 }
             }
             .frame(height: 300)
+            // 🔚 END SECTION: Liste der Ordner & Auswahl
 
+            // 🔙 SECTION: Navigation
             HStack {
                 Button("⬅️ Zurück") {
                     navigateUp()
@@ -43,26 +59,38 @@ struct ContentView: View {
                     loadDirectory(path: androidPath)
                 }
             }
+            // 🔚 END SECTION: Navigation
 
             Divider()
 
+            // 📁 SECTION: Zielordner wählen
             Button("📁 Zielordner auf dem Mac wählen") {
                 if let path = selectMacFolder() {
                     macTargetPath = path
                     output = "Mac-Zielordner:\n\(path)"
                 }
             }
+            // 🔚 END SECTION: Zielordner wählen
 
-            if let selected = selectedEntry {
-                Text("✅ Quelle ausgewählt: \(selected)")
-                Text("📍 Zielordner: \(macTargetPath.isEmpty ? "Nicht gewählt" : macTargetPath)")
-                Button("📥 Jetzt übertragen") {
-                    output = pullSelected(entry: selected)
+            // 📥 SECTION: Übertragen-Button & Fortschritt
+            if !selectedEntries.isEmpty {
+                Text("✅ Ausgewählt: \(selectedEntries.joined(separator: ", "))")
+                Text("📍 Ziel: \(macTargetPath.isEmpty ? "Nicht gewählt" : macTargetPath)")
+                Button("📥 Ausgewählte übertragen") {
+                    Task {
+                        await transferSelectedEntries()
+                    }
+                }
+                if !progressText.isEmpty {
+                    Text("⏳ Fortschritt: \(progressText)")
+                        .font(.system(size: 12, design: .monospaced))
                 }
             }
+            // 🔚 END SECTION: Übertragen-Button & Fortschritt
 
             Divider()
 
+            // 🖨️ SECTION: Ausgabe
             Text("🖨️ Ergebnis:")
                 .font(.headline)
             ScrollView {
@@ -70,6 +98,7 @@ struct ContentView: View {
                     .font(.system(size: 12, design: .monospaced))
                     .padding()
             }
+            // 🔚 END SECTION: Ausgabe
         }
         .padding()
         .onAppear {
@@ -77,6 +106,7 @@ struct ContentView: View {
         }
     }
 
+    // 📂 SECTION: Navigation & Verzeichniswechsel
     func navigateInto(_ folder: String) {
         let clean = folder.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         androidPath += "/\(clean)"
@@ -89,7 +119,9 @@ struct ContentView: View {
         if androidPath.isEmpty { androidPath = "/" }
         loadDirectory(path: androidPath)
     }
+    // 🔚 END SECTION: Navigation & Verzeichniswechsel
 
+    // 🗂️ SECTION: ADB-Verzeichnisinhalt laden
     func loadDirectory(path: String) {
         let task = Process()
         let pipe = Pipe()
@@ -113,7 +145,9 @@ struct ContentView: View {
             .map { String($0) }
             .sorted()
     }
+    // 🔚 END SECTION: ADB-Verzeichnisinhalt laden
 
+    // 📁 SECTION: Zielordner-Dialog macOS
     func selectMacFolder() -> String? {
         let panel = NSOpenPanel()
         panel.title = "Mac-Zielordner auswählen"
@@ -126,29 +160,67 @@ struct ContentView: View {
         }
         return nil
     }
+    // 🔚 END SECTION: Zielordner-Dialog macOS
 
-    func pullSelected(entry: String) -> String {
+    // 📥 SECTION: Datenübertragung (adb pull) starten
+    func transferSelectedEntries() async {
         guard !macTargetPath.isEmpty else {
-            return "❗ Zielordner auf dem Mac wurde nicht gewählt."
+            output = "❗ Zielordner auf dem Mac wurde nicht gewählt."
+            return
         }
 
-        let source = "\(androidPath)/\(entry)"
-        let destination = macTargetPath
+        output = "Mac-Zielordner:\n\(macTargetPath)\n"
+        let total = selectedEntries.count
+        var count = 0
 
-        let task = Process()
-        let pipe = Pipe()
+        for (index, entry) in selectedEntries.sorted().enumerated() {
+            await MainActor.run {
+                let percent = Int((Double(index) / Double(total)) * 100)
+                progressText = "\(percent)% – Übertrage: \(entry) (\(index + 1)/\(total))"
+            }
 
-        task.executableURL = URL(fileURLWithPath: "/opt/homebrew/bin/adb")
-        task.arguments = ["pull", source, destination]
-        task.standardOutput = pipe
+            await performAdbPull(entry: entry)
 
-        do {
-            try task.run()
-        } catch {
-            return "❌ Fehler beim Kopieren: \(error.localizedDescription)"
+            count += 1
         }
 
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        return "✅ Ergebnis adb pull:\n" + String(decoding: data, as: UTF8.self)
+        await MainActor.run {
+            progressText = "✅ Fertig. \(count) Einträge übertragen."
+        }
     }
+
+    func performAdbPull(entry: String) async {
+        await withCheckedContinuation { continuation in
+            DispatchQueue.global().async {
+                let source = "\(androidPath)/\(entry)"
+                let destination = macTargetPath
+
+                let task = Process()
+                let pipe = Pipe()
+
+                task.executableURL = URL(fileURLWithPath: "/opt/homebrew/bin/adb")
+                task.arguments = ["pull", source, destination]
+                task.standardOutput = pipe
+
+                do {
+                    try task.run()
+                    task.waitUntilExit()
+
+                    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+                    let result = String(decoding: data, as: UTF8.self)
+
+                    DispatchQueue.main.async {
+                        output += "\n✅ \(entry):\n\(result)"
+                        continuation.resume()
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        output += "\n❌ Fehler bei \(entry): \(error.localizedDescription)"
+                        continuation.resume()
+                    }
+                }
+            }
+        }
+    }
+    // 🔚 END SECTION: Datenübertragung (adb pull) starten
 }
